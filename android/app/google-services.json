@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "500065114829",
+    "project_id": "ziplymart-a0605",
+    "storage_bucket": "ziplymart-a0605.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500065114829:android:fb20e5a3e17dc22949e784",
+        "android_client_info": {
+          "package_name": "com.ziplymart.ziplyuserapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500065114829-7t0hp7748r0a1js9kiqvkthi3uau5tn9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb-PIfaZ66dKaVD3xFgj4bjR_jywQ-ipU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500065114829-7t0hp7748r0a1js9kiqvkthi3uau5tn9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
