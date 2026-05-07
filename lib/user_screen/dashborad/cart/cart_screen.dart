@@ -138,12 +138,19 @@ class _CartCheckoutScreenState extends State<CartCheckoutScreen> {
                                   onTap: isEligible
                                       ? () {
                                           /// APPLY / REMOVE LOGIC
+
                                           cartValue.getCartApi(
                                             context,
                                             coupon: isApplied
                                                 ? ''
                                                 : coupon?.couponCode,
                                           );
+
+                                          if (isApplied == false) {
+                                            setState(() {
+                                              cartValue.isWalletApply = false;
+                                            });
+                                          }
                                         }
                                       : null,
                                   child: Opacity(
@@ -204,6 +211,7 @@ class _CartCheckoutScreenState extends State<CartCheckoutScreen> {
                                             child: CustomText(
                                               isApplied ? 'REMOVE' : 'APPLY',
                                               fontSize: 12,
+                                              color: Colors.white,
                                               fontWeight: FontWeight.w500,
                                             ),
                                           ),
@@ -216,6 +224,7 @@ class _CartCheckoutScreenState extends State<CartCheckoutScreen> {
                             ),
                           ),
                         ),
+                        SizedBox(height: 10),
                         if (getCart?.walletBalance != '0.00' &&
                             getCart?.walletBalance != '0')
                           WalletUnlockProgressBar(
@@ -423,7 +432,6 @@ class _CartCheckoutScreenState extends State<CartCheckoutScreen> {
                         ),
                       ],
                     ),
-
                     if (cartValue.showCouponAnimation)
                       Center(
                         child: SizedBox(
